@@ -5,6 +5,7 @@ void main() {
     char estado1[1], estado2[1], cidade1[50], cidade2[50], codigo1[3], codigo2[3];
     int populacao1, populacao2, qtdPontosTuristico1, qtdPontosTuristico2;
     float pib1, pib2, area1, area2;
+    float densidadePopulacional1, pibPerCapita1, densidadePopulacional2, pibPerCapita2;
     
     printf("------ Seja bem-vindo ao jogo Super Trunfo ------\n");
 
@@ -41,6 +42,9 @@ void main() {
     printf("\nDigite a quantidade de pontos turisticos na cidade: ");
     scanf("%d", &qtdPontosTuristico1);
 
+    densidadePopulacional1 = (float) populacao1 / area1;
+    pibPerCapita1 = (float) pib1 / populacao1;
+
     printf("\n\nPreencha a carta 2:");
 
     printf("\nDigite uma letra entre A e H para o estado: ");
@@ -74,6 +78,9 @@ void main() {
     printf("\nDigite a quantidade de pontos turisticos na cidade: ");
     scanf("%d", &qtdPontosTuristico2);
 
+    densidadePopulacional2 = (float) populacao2 / area2;
+    pibPerCapita2 = (float) pib2 / populacao2;
+
     printf("\n------ Exibicao das Cartas ------\n");
 
     printf("\nCarta 1:");
@@ -83,7 +90,9 @@ void main() {
     printf("\nPopulacao: %d", populacao1);
     printf("\nArea: %.2f km2", area1);
     printf("\nPIB: %.2f bilhoes de reais", pib1);
-    printf("\nNumero de Pontos Turisticos: %d\n", qtdPontosTuristico1);
+    printf("\nNumero de Pontos Turisticos: %d", qtdPontosTuristico1);
+    printf("\nDensidade Populacional: %.2f hab/km2", densidadePopulacional1);
+    printf("\nPIB per Capita: %.2f reais\n", pibPerCapita1);
 
     printf("\nCarta 2:");
     printf("\nEstado: %s", estado2);
@@ -92,7 +101,9 @@ void main() {
     printf("\nPopulacao: %d", populacao2);
     printf("\nArea: %.2f km2", area2);
     printf("\nPIB: %.2f bilhoes de reais", pib2);
-    printf("\nNumero de Pontos Turisticos: %d\n", qtdPontosTuristico2);
+    printf("\nNumero de Pontos Turisticos: %d", qtdPontosTuristico2);
+    printf("\nDensidade Populacional: %.2f hab/km2", densidadePopulacional2);
+    printf("\nPIB per Capita: %.2f reais\n", pibPerCapita2);
 
     printf("\n------ Fim do jogo Super Trunfo ------\n");
 }
